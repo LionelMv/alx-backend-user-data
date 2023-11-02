@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""This  module contains user data management"""
 import re
 from typing import List
 
