@@ -33,10 +33,13 @@ class Auth:
         """
         Validates all requests to secure the API.
         """
-        return None
+        if request is None:
+            return None
+        
+        return request.headers.get('Authorization', None)
 
     def current_user(self, request=None) -> TypeVar('User'):
         """
-        Checks if current user is forbidden to request services or not.
+        Gets the current user.
         """
         return None
