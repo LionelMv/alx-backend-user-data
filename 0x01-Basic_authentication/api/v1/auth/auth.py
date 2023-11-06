@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
 """
+Module manages API authentication.
 """
 from flask import request
 from typing import List, TypeVar
 
 
 class Auth:
+    """Class to manage the API authentication"""
+
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
-        """"""
+        """
+        Defines which routes don't need authentication.
+        Returns True if path is not in excluded paths, else False.
+        """
         if path is None:
             return True
 
