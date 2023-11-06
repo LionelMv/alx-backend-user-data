@@ -22,11 +22,11 @@ class Auth:
                 return True
 
         return False
-    
+
     def authorization_header(self, request=None) -> str:
         """"""
         return None
-    
+
     def current_user(self, request=None) -> TypeVar('User'):
         """"""
         return None
