@@ -30,9 +30,13 @@ class Auth:
         return False
 
     def authorization_header(self, request=None) -> str:
-        """"""
+        """
+        Validates all requests to secure the API.
+        """
         return None
 
     def current_user(self, request=None) -> TypeVar('User'):
-        """"""
+        """
+        Checks if current user is forbidden to request services or not.
+        """
         return None
