@@ -1,5 +1,5 @@
 # Personal Data
-# About
+## About
 - Examples of Personally Identifiable Information (PII)
 - Implementing a log filter that will obfuscate PII fields.
 - Encrypting a password and checking the validity of an input password.
