@@ -31,6 +31,15 @@ $ API_HOST=0.0.0.0 API_PORT=5000 python3 -m api.v1.app
 ```
 
 
+## Environment
+ - Ubuntu 18.04 LTS
+ - Python3
+ - Style guides:
+    - [Google Style Python Docstrings](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)
+    - [Pycodestyle](https://pycodestyle.pycqa.org/en/latest/intro.html#example-usage-and-output)
+    - [Type Annotation](https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html)
+
+
 ## Routes
 
 - `GET /api/v1/status`: returns the status of the API
@@ -40,3 +49,4 @@ $ API_HOST=0.0.0.0 API_PORT=5000 python3 -m api.v1.app
 - `DELETE /api/v1/users/:id`: deletes an user based on the ID
 - `POST /api/v1/users`: creates a new user (JSON parameters: `email`, `password`, `last_name` (optional) and `first_name` (optional))
 - `PUT /api/v1/users/:id`: updates an user based on the ID (JSON parameters: `last_name` and `first_name`)
+
