@@ -33,7 +33,7 @@ class DB:
         return self.__session
 
     def add_user(self, email: str, hashed_password: str) -> User:
-        """Saves the user to the database."""
+        """Save the user to the database."""
         new_user = User(email=email, hashed_password=hashed_password)
         self._session.add(new_user)
         self._session.commit()
@@ -49,3 +49,18 @@ class DB:
         if user is None:
             raise NoResultFound
         return user
+
+    def update_user(self, user_id: int, **kwargs) -> None:
+        """Locates a user to update and updates the user's attributes."""
+        if kwargs:
+            try:
+                user = self.find_user_by(id=user_id)
+                for key, value in kwargs.items():
+                    if hasattr(user, key):
+                        setattr(user, key, value)
+                    else:
+                        raise ValueError
+                self._session.commit()
+            except NoResultFound:
+                pass
+            return None
