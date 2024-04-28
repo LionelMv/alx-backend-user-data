@@ -21,6 +21,9 @@
 - [SQLAlchemy](https://docs.sqlalchemy.org/en/13/orm/tutorial.html#declare-a-mapping)
 
 ### Setup
+Create a virtual environment and install the following:
 ```
-pip3 install bcrypt
+pip install bcrypt
+pip install SQLAlchemy
+pip install Flask
 ```
